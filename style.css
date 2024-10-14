@@ -1,0 +1,373 @@
+* {
+  box-sizing: border-box;
+}
+/* Code chung toan bo chuong trinh */
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+/* Trang chu */
+.login {
+  display: flex;
+  width: 100%;
+  height: 30px;
+  background-color: beige;
+  align-items: center;
+  /* margin-top: -30px; */
+}
+.login1 {
+  font-size: 15px;
+  margin-left: 60px;
+}
+.login2 {
+  margin-left: auto;
+}
+.login2,
+.login3,
+.login4,
+.login5 {
+  padding-right: 55px;
+  font-size: 13px;
+}
+/* Thanh dieu huong */
+.event {
+  display: flex;
+  height: 50px;
+  width: 100%;
+  background-color: black;
+  align-items: center;
+}
+.login--fixed,
+.event--fixed {
+  position: fixed;
+  z-index: 2;
+}
+.event--fixed {
+  margin-top: 30px;
+}
+.event img {
+  height: 90x;
+  width: 80px;
+  border-radius: 50%;
+  margin: 0px 75px;
+}
+.event .nav {
+  display: flex;
+}
+.tc,
+.shoes,
+.clothes,
+.accessories,
+.brand {
+  font-size: 13px;
+  padding: 0 30px;
+  /* font-weight: bolder; */
+}
+.nav a {
+  color: white;
+}
+.search {
+  margin-left: 100px;
+  padding-left: 20px;
+  padding-right: 15px;
+  font-size: 20px;
+  position: relative;
+}
+.sr {
+  width: 230px;
+  height: 30px;
+  border: none;
+  border-radius: 20%;
+  text-align: center;
+}
+.search i {
+  position: absolute;
+  font-size: 15px;
+  right: 220px;
+  top: 6px;
+}
+.user,
+.shopping {
+  color: white;
+  padding-left: 20px;
+  margin-left: 10px;
+  font-size: 25px;
+}
+
+/* Anh trang chu */
+.br-main {
+  position: relative;
+  /* display: none; */
+}
+.br-main img {
+  width: 100%;
+  height: 655px;
+  margin-top: 80px;
+}
+.content1,
+.content4 {
+  font-size: 30px;
+}
+.content2,
+.content3 {
+  font-size: 50px;
+}
+.content2 {
+  margin-top: 6px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+}
+.content3 {
+  margin-left: 50px;
+}
+.content4 {
+  margin-left: 100px;
+  margin-top: 10px;
+}
+.br-main .content {
+  position: absolute;
+  top: 130px;
+  left: 80px;
+  color: white;
+}
+/* Chi tiet tung muc dieu huong */
+.nav > li {
+  position: relative;
+  /* background-color: white; */
+  /* border: 1px solid black; */
+}
+/* .nav a {
+  display: inline-block;
+  width: 100%;
+} */
+.nav > li:hover .shoes2 {
+  visibility: visible;
+}
+.shoes2 {
+  position: absolute;
+  width: 185px;
+  height: 175px;
+  border: 1px solid white;
+  z-index: 1;
+  font-size: 13.5px;
+  padding: 15px;
+  background-color: black;
+  top: 32px;
+  /* border: none; */
+  transition: 0.1s;
+  visibility: hidden;
+}
+.shoes2 li {
+  padding-bottom: 18px;
+}
+.nav > li:hover .clothes2 {
+  visibility: visible;
+}
+.clothes2 {
+  position: absolute;
+  width: 180px;
+  height: 215px;
+  border: 1px solid white;
+  z-index: 1;
+  font-size: 13.5px;
+  margin: 15px;
+  background-color: black;
+  top: 17px;
+  left: 15px;
+  /* border: none; */
+  transition: 0.1s;
+  visibility: hidden;
+}
+.clothes2 li {
+  padding-bottom: 18px;
+}
+.other-clothes {
+  position: absolute;
+  border: 1px solid white;
+  left: 178px;
+  top: 167px;
+  width: 160px;
+  background-color: black;
+  padding-top: 17px;
+  padding-left: 20px;
+  visibility: hidden;
+}
+.other-father {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+}
+.clothes2 .other:hover .other-clothes {
+  visibility: visible;
+}
+.accessories2 {
+  position: absolute;
+  z-index: 1;
+  border: 1px solid white;
+  width: 185px;
+  height: 235px;
+  font-size: 13.5px;
+  padding: 15px;
+  background-color: black;
+  top: 32px;
+  transition: 0.1s;
+  visibility: hidden;
+}
+.nav > li:hover .accessories2 {
+  visibility: visible;
+}
+.accessories2 li {
+  padding-bottom: 18px;
+}
+.brand2 {
+  position: absolute;
+  z-index: 1;
+  border: 1px solid white;
+  width: 185px;
+  height: 235px;
+  font-size: 13.5px;
+  padding: 15px;
+  background-color: black;
+  top: 32px;
+  transition: 0.1s;
+  visibility: hidden;
+}
+.brand2 li {
+  padding-bottom: 18px;
+}
+.nav > li:hover .brand2 {
+  visibility: visible;
+}
+/* San pham noi bat */
+.special {
+  margin: 15px 60px 0px;
+}
+.first {
+  display: flex;
+  width: 1400px;
+  height: 700px;
+  /* border: 1px solid black; */
+}
+.tieude {
+  text-align: center;
+  font-size: 30px;
+  /* margin-top: 25px; */
+}
+.first2 {
+  width: calc(100% - 330px);
+  justify-content: center;
+  align-items: center;
+}
+.first2:first-child {
+  margin-top: 20px;
+}
+.first2-img {
+  display: flex;
+  /* border: 1px solid black; */
+  margin-top: 35px;
+  justify-content: space-around;
+}
+.first2-img img {
+  width: 230px;
+  height: 220px;
+  margin: 0px 20px;
+  border-radius: 25%;
+}
+.first2-img p {
+  font-size: 15px;
+  margin-left: 30px;
+  padding-top: 5px;
+}
+.first2-img p:last-child {
+  margin-left: 165px;
+}
+/* hinh anh thu 2 */
+.first2-img2 {
+  display: flex;
+  /* border: 1px solid black; */
+  margin-top: 35px;
+  justify-content: space-around;
+}
+.first2-img2 img {
+  width: 230px;
+  height: 220px;
+  margin: 0px 20px;
+  border-radius: 25%;
+}
+.first2-img2 p {
+  font-size: 15px;
+  margin-left: 30px;
+  padding-top: 5px;
+}
+.first2-img2 p:last-child {
+  margin-left: 165px;
+}
+/* event cho san pham noi bat */
+.special {
+  /* display: none; */
+}
+.first2-img img:hover {
+  border: 1px solid black;
+}
+.first2-img2 img:hover {
+  border: 1px solid black;
+}
+/* Hinh anh sale off */
+.first4 {
+  margin-left: auto;
+  margin-top: 10px;
+  width: 330px;
+  height: 685px;
+  border: 1px solid black;
+}
+
+/* footer */
+.in4 {
+  display: flex;
+  border: 1px solid black;
+  margin-top: 20px;
+  height: 200px;
+  justify-content: space-around;
+  background-color: black;
+}
+.icon {
+  text-align: center;
+  padding: 10px 10px 0px;
+  margin-top: 6px;
+}
+.in4-1 {
+  margin-top: 35px;
+  margin-left: 10px;
+}
+.in4-1 p {
+  padding-bottom: 20px;
+  font-size: 16px;
+}
+.in4-2 {
+  margin-top: 25px;
+}
+.in4-3 {
+  margin-top: 25px;
+}
+.in4-1,
+.in4-2,
+.in4-3 {
+  color: white;
+}
+/* logo contact */
+.logo-contact {
+  position: fixed;
+  bottom: 30px;
+  left: 10px;
+}
+.logo-contact img {
+  width: 40px;
+  height: 40px;
+}
+.logo1,
+.logo2 {
+  padding-bottom: 10px;
+}

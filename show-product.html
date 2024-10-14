@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="show-detail-product.css" />
+    <title>Detail-Product</title>
+  </head>
+  <body>
+    <main class="buy-product-shoes show-detail-product-shoes">
+      <div class="click-show-detail-product-shoes detail-product-shoes-1">
+        <div class="show-img-product-shoes">
+          <div class="show-img-product-shoes-big">
+            <img
+              src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/1408426f9b954831830835cf566f779c_9366/giay-da-bong-turf-predator-accuracy.4.jpg"
+              alt=""
+            />
+          </div>
+          <div class="show-img-product-shoes-small">
+            <img
+              src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/1408426f9b954831830835cf566f779c_9366/giay-da-bong-turf-predator-accuracy.4.jpg"
+              alt=""
+              style="display: none"
+            />
+            <img
+              src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/cc390d6745274095a7f70a009bd168bb_9366/Giay_DJa_Bong_Turf_Predator_Accuracy.4_trang_GY9995_09_standard.jpg"
+              alt=""
+            />
+            <img
+              src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/0bd40d17fdef428698ae7fc9550b06a7_9366/Giay_DJa_Bong_Turf_Predator_Accuracy.4_trang_GY9995_02_standard.jpg"
+              alt=""
+            />
+            <img
+              src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/45a8c7df6084421a8aba19f907bcc336_9366/Giay_DJa_Bong_Turf_Predator_Accuracy.4_trang_GY9995_03_standard.jpg"
+              alt=""
+            />
+            <img
+              src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/b393a286106249e99e432daeb0c9f6f8_9366/Giay_DJa_Bong_Turf_Predator_Accuracy.4_trang_GY9995_04_standard.jpg"
+              alt=""
+            />
+            <img
+              src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/b3182af3fa1d427282c8e8c3444b6ae2_9366/Giay_DJa_Bong_Turf_Predator_Accuracy.4_trang_GY9995_42_detail.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="show-information-product-shoes">
+          <p class="show-name-shoes">Giày đá bóng Turf Precador Accuracy 4</p>
+          <p class="show-price-shoes">1.600.000</p>
+          <ul class="show-detail-shoes">
+            <li>Logo thêu sắc nét</li>
+            <li>Chất vải thun lạnh thoáng mát, thoát mồ hôi tốt</li>
+            <li>Toàn thân in chuyển nhiệt cao cấp</li>
+            <li>Size: S/M/L/XL/XXL</li>
+            <li>Form chuẩn đẹp, hợp body người Việt</li>
+            <li>MIỄN PHÍ in tên số + ship khi đặt đội >10 bộ</li>
+          </ul>
+          <p class="size-shoes">Kích cỡ</p>
+          <div class="show-size-shoes">
+            <button type="submit">M</button>
+            <button type="submit">L</button>
+            <button type="submit">XL</button>
+            <button type="submit">XXL</button>
+          </div>
+          <div class="buy-or-add-shoes">
+            <button type="submit" class="button-add-shoes">
+              Thêm vào giỏ hàng
+            </button>
+            <button type="submit" class="button-buy-shoes">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      const imgBig = document.querySelector(".show-img-product-shoes-big img"); //Dòng này chọn phần tử hình ảnh lớn sẽ hiển thị hình ảnh thumbnail hiện tại.
+      const imgSmall = document.querySelectorAll(
+        ".show-img-product-shoes-small img"
+      ); // Dòng này chọn tất cả hình ảnh thumbnail nhỏ.
+      let currentIndex = 0; // Chỉ số hình ảnh nhỏ hiện tại
+      /*Tại đây, bạn đang lặp qua mỗi hình ảnh nhỏ và gán một trình nghe sự kiện click. 
+      Khi một hình thu nhỏ được nhấp vào, src của hình ảnh lớn sẽ được cập nhật để khớp với src của hình ảnh thumbnail đã nhấp.
+      */
+      // Cập nhật hình ảnh lớn với hình ảnh nhỏ đầu tiên
+      // imgBig.src = imgSmall[currentIndex].src;
+      // Thay đổi hình ảnh lớn khi nhấp vào hình ảnh nhỏ
+      imgSmall.forEach(function (imgItem, index) {
+        imgItem.addEventListener("click", function () {
+          imgBig.src = imgItem.src;
+          currentIndex = index; // Cập nhật chỉ số hiện tại
+        });
+      });
+      // Chuyển đổi sang hình ảnh nhỏ tiếp theo khi nhấp vào hình ảnh lớn
+      imgBig.addEventListener("click", function () {
+        currentIndex = (currentIndex + 1) % imgSmall.length; // Tăng chỉ số và quay về nếu quá số lượng
+        imgBig.src = imgSmall[currentIndex].src; // Cập nhật hình ảnh lớn
+      });
+    </script>
+  </body>
+</html>
